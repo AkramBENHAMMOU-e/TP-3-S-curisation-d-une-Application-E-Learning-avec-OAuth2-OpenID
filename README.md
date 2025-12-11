@@ -9,29 +9,12 @@ L'architecture repose sur la séparation des responsabilités :
 - **Frontend (React)** : Agit comme le Client (Public Client). Il redirige l'utilisateur vers Keycloak pour l'authentification et stocke le token d'accès.
 - **Backend (Spring Boot)** : Agit comme le Resource Server. Il valide le token JWT reçu dans les en-têtes HTTP et protège les endpoints API.
 
-```mermaid
-graph TD
-    User((Utilisateur))
-    Browser[Navigateur (React App)]
-    Keycloak[Keycloak (Auth Server)]
-    API[Spring Boot (Resource Server)]
-    DB[(H2 Database)]
-
-    User -->|1. Accède à l'app| Browser
-    Browser -->|2. Redirige (Login)| Keycloak
-    Keycloak -->|3. Authentifie & Délivre Token| Browser
-    Browser -->|4. Requête API + Bearer Token| API
-    API -->|5. Valide Token (Signature/Exp)| Keycloak
-    API -->|6. Lit/Ecrit Données| DB
-    API -->|7. Réponse JSON| Browser
-```
-
----
+![architecture](./screenshots/architecture.png)
 
 ## 2. Technologies Utilisées
 
 - **Identité** : Keycloak (Docker/Local)
-- **Backend** : Java 17, Spring Boot 3.2, Spring Security 6, H2 Database.
+- **Backend** : Java 21, Spring Boot 3.2, Spring Security 6, H2 Database.
 - **Frontend** : React (Vite), Axios, Keycloak-js.
 - **Protocole** : OAuth 2.0, OpenID Connect (OIDC).
 
