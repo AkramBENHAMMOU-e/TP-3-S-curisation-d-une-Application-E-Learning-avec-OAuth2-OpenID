@@ -1,0 +1,6 @@
+com\example\tp3\Tp3Application.class
+com\example\tp3\controller\CourseController.class
+com\example\tp3\repository\CourseRepository.class
+com\example\tp3\config\SecurityConfig.class
+com\example\tp3\config\SecurityConfig$KeycloakRoleConverter.class
+com\example\tp3\entity\Course.class
