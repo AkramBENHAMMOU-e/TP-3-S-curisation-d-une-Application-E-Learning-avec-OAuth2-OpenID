@@ -49,15 +49,18 @@ L'interface s'adapte dynamiquement selon l'utilisateur connecté :
 L'utilisateur est redirigé vers la page de login standard de Keycloak.
 
 ![Login Keycloak](./screenshots/login-admin.png)
+
 *Figure 1 : Page de connexion Keycloak (Login Admin)*
 
 ### 4.2. Interface Administrateur
 Une fois connecté en tant qu'administrateur, l'utilisateur a accès aux fonctionnalités de gestion (Ajout, Édition, Suppression).
 
 ![UI Admin](./screenshots/UI-admin.png)
+
 *Figure 2 : Tableau de bord Administrateur avec formulaires et actions*
 
 ![Ajout de cours](./screenshots/add-course-as-admin.png)
+
 *Figure 3 : Création d'un nouveau cours par un Admin*
 
 ### 4.3. Interface Utilisateur Standard (Étudiant)
@@ -70,6 +73,7 @@ Un utilisateur standard ne voit que la liste des cours, sans options de modifica
 Les requêtes vers l'API incluent le token JWT dans le header `Authorization`.
 
 ![Token Generation](./screenshots/generate-token-admin.png)
+
 *Figure 5 : Analyse du Token JWT généré*
 
 ![Header Authorization](./screenshots/add-token-in-headerAuthorization-to(add-curse.png)
@@ -78,6 +82,7 @@ Les requêtes vers l'API incluent le token JWT dans le header `Authorization`.
 En cas de tentative d'accès non autorisé (ex: un étudiant essayant de créer un cours via Postman), l'API rejette la demande.
 
 ![Unauthorized](./screenshots/unhautorized.png)
+
 *Figure 7 : Erreur 403 Forbidden lors d'un accès non autorisé*
 
 ---
